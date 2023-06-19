@@ -1,13 +1,4 @@
 <template>
-    <!-- <div class="card">
-        <div class="projectName">{{projectName}}</div>
-        <div class="card-name">
-            {{name}}
-        </div>
-        <div class="github"><a href={{link}}>Github Link</a></div>
-        <div class="techStack">Tech Stack: <span>{{techStack}}</span></div>
-        <div class="projectDetail">{{description}}</div>
-    </div> -->
     <div class="card-container">
         <div class="card">
             <div class="box">
@@ -15,7 +6,7 @@
                     <h2>{{ projectName }}</h2>
                     <h3>{{ projectName }}</h3>
                     <p>{{ description }}</p>
-                    <a href={{link}}>Explore</a>
+                    <a :href='link' target ="_blank">Explore</a>
                 </div>
             </div>
         </div>
@@ -50,8 +41,6 @@ export default {
 </script>
 
 <style scoped>
-/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap"); */
-
 .card-container {
     display: flex;
     justify-content: center;
@@ -74,7 +63,8 @@ export default {
 }
 
 .card-container .card:nth-child(1) .box .content a {
-    background: #2196f3;
+    background: #cfbe06;
+    color: #fff;
 }
 
 .card-container .card:nth-child(2) .box .content a {
@@ -83,6 +73,13 @@ export default {
 
 .card-container .card:nth-child(3) .box .content a {
     background: #23c186;
+}
+.content{
+    display: flex;
+    height: 315px;
+    flex-direction: column;
+    justify-content: center;
+    
 }
 
 .card-container .card .box {
@@ -144,14 +141,16 @@ export default {
 }
 
 .card-container .card .box .content a {
-    position: relative;
+    /* position: relative; */
     display: inline-block;
+    align-self: start;
+    margin-top: auto;
     padding: 8px 20px;
     background: black;
     border-radius: 5px;
     text-decoration: none;
     color: white;
-    margin-top: 20px;
+    margin-left: 4.2em;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transition: 0.5s;
 }
